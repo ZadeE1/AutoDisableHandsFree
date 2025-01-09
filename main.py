@@ -1,8 +1,18 @@
 import subprocess
 import os
 
+def read_text_without_spaces(filename):
+  with open(filename, 'r') as file:
+    text = file.read()
+    text_without_spaces = text.replace(" ", "") 
+    if text_without_spaces == "":
+        raise Exception("No device was named in device_name.txt, please go add then name of the bluetooth device you wish to auto disable Hands Free mode")
+    return text_without_spaces
+
+# Example usage:
+file_path = "device_name.txt"  # Replace with the actual file path
 # List of Bluetooth device names to monitor
-device_list = ["Earmuffs"]
+device_list = [read_text_without_spaces(file_path)]
 
 # Path to the bin folder relative to the script's location
 script_dir = os.path.dirname(os.path.abspath(__file__))
