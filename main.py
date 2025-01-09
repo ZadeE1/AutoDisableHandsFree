@@ -1,11 +1,13 @@
 import subprocess
 import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 def read_text_without_spaces(filename):
   with open(filename, 'r') as file:
     text = file.read()
     text_without_spaces = text.replace(" ", "") 
     if text_without_spaces == "":
+        subprocess.Popen(f"PowerShell -Command \"Add-Type -AssemblyName PresentationFramework;[System.Windows.MessageBox]::Show('AutoDisableHandsFree: please add the device name -> {script_dir}\\{filename} in order for the app to work functionally')\"")
         raise Exception("No device was named in device_name.txt, please go add then name of the bluetooth device you wish to auto disable Hands Free mode")
     return text_without_spaces
 
@@ -15,7 +17,6 @@ file_path = "device_name.txt"  # Replace with the actual file path
 device_list = [read_text_without_spaces(file_path)]
 
 # Path to the bin folder relative to the script's location
-script_dir = os.path.dirname(os.path.abspath(__file__))
 bin_path = os.path.join(script_dir, "bin")
 
 # Paths to btcom and btdiscovery executables
