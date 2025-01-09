@@ -15,9 +15,8 @@
 
 **Benefits:**
 
-* Prevents accidental phone calls through Bluetooth.
-* Simplifies Bluetooth management.
-* Improves user experience by eliminating unwanted phone calls.
+* Prevents unwanted microphone capablities for higher quality listening on wireless headsets.
+* Removes constant disabling of headset telephony.
 
 **Note:**
 
@@ -25,5 +24,3 @@
 
 **Author:** [ZadeE1]
 **Version:** [1.0]
-
-**Contact:** [Your Email Address]
