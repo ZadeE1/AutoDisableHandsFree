@@ -1,4 +1,4 @@
-# AutoDisableHandsfree
+# AutoDisableHandsFree
 
 **This project automates the disabling of hands-free mode for a specific Bluetooth device when Bluetooth is enabled on a Windows machine.**
 
