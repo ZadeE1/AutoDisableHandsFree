@@ -24,3 +24,6 @@
 
 **Author:** [ZadeE1]
 **Version:** [1.0]
+
+
+* Bluetooth commands provided by [Bluetooth Command Line Tools](https://bluetoothinstaller.com/bluetooth-command-line-tools)
