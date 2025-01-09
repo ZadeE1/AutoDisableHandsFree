@@ -1,4 +1,4 @@
-@echo off
+echo cwd
 set "script_dir=%~dp0"
 set "run_bat_path=%script_dir%run.bat"
 
